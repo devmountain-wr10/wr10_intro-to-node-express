@@ -32,20 +32,20 @@ app.get('/api/users', (req, res) => {
 
     res.status(200).send(users[tgtIndex])
   } else {
+    // send a response with just a status
+    // res.sendStatus(200);
+  
+    // send a response with a status and a custom message
+    // res.status(200).send('howdy do');
+    // res.status(200).json();
+  
+    // send a response with a status and our users
     res.status(200).send({
       "message": 'You done good',
       "theUsers": users
     })
   }
 
-  // send a response with just a status
-  // res.sendStatus(200);
-
-  // send a response with a status and a custom message
-  // res.status(200).send('howdy do');
-  // res.status(200).json();
-
-  // send a response with a status and our users
 
 });
 
